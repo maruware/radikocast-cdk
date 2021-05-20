@@ -70,7 +70,7 @@ export class Schedule {
     // TODO: JST -> UTC
 
     return events.Schedule.cron({
-      minute: (this.endM + 8).toString(),
+      minute: (this.endM + 10).toString(),
       hour: ((this.endH - 9 + 24) % 24).toString(),
       month: '*',
       weekDay: weekDay
