@@ -65,7 +65,8 @@ export class RadikocastCdkStack extends cdk.Stack {
     // s3
     const bucket = new s3.Bucket(this, `bucket-${config.id}`, {
       bucketName: config.bucketName,
-      publicReadAccess: true
+      publicReadAccess: true,
+      websiteIndexDocument: 'index.html'
     })
 
     config.schedules.forEach((schedule, i) => {
