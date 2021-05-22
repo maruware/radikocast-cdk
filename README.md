@@ -4,14 +4,20 @@ radikocast deployment with AWS CDK
 
 ## Usage
 
-### Write Config
+### Basic
+
+#### 1. Write config
 
 See [sample.yml](sample.yml)
 
-### Requirements
+#### 2. Deploy
 
-- aws-cdk
-  - `npm i -g aws-cdk`
+Specify config file path with context
+
+```sh
+$ npm run build
+$ npx cdk deploy -c ./sample.yml
+```
 
 ### CDK commands
 
@@ -21,9 +27,3 @@ See [sample.yml](sample.yml)
 - `cdk deploy` deploy this stack to your default AWS account/region
 - `cdk diff` compare deployed stack with current state
 - `cdk synth` emits the synthesized CloudFormation template
-
-Specify config file path with context
-
-```sh
-$ cdk deploy -c ./sample.yml
-```
