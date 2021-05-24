@@ -94,7 +94,9 @@ export class RadikocastCdkStack extends cdk.Stack {
                 '-at',
                 sprintf('%02d:%02d', schedule.startH, schedule.startM),
                 '-bucket',
-                bucket.bucketName
+                bucket.bucketName,
+                '-format',
+                'm4a'
               ]
             }
           ]
