@@ -4,6 +4,11 @@ radikocast deployment with AWS CDK
 
 ## Usage
 
+### Requirements
+
+- Enabled AWS credentials and set region
+  - Basic: set AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION
+
 ### Basic
 
 #### 1. Write config
@@ -18,6 +23,10 @@ Specify config file path with context
 $ npm run build
 $ npx cdk deploy -c ./sample.yml
 ```
+
+#### 3. Subscribe feed
+
+Feed URL is http://{mybucket}.s3-website-{region}.amazonaws.com/feed.xml
 
 ### CDK commands
 
